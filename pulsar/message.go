@@ -86,6 +86,9 @@ type Message interface {
 
 	// Key get the key of the message, if any
 	Key() string
+
+	// Get the message redelivery count, maintained in pulsar broker
+	RedeliveryCount() uint32
 }
 
 // MessageID identifier for a particular message
